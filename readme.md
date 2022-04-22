@@ -8,4 +8,4 @@ Step 1: start mq with either docker run -it --rm --name rabbitmq -p 5672:5672 -p
 
  Step 4: Start node producer with "node dist/index.js" (Can be run multiple times)
 
- Step 5: Start dotNet producer (f5 in Visual Studio)
+ Step 5: Start dotNet producer (f5 in Visual Studio 2022)

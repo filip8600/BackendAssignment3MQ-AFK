@@ -19,14 +19,13 @@ amqp.connect('amqp://localhost', function(error0:any, connection:any) {
         var queue = 'hotelReservation';
 
         channel.assertQueue(queue, {
-            durable: false,
-            //basicQos: 1  //not the right way :( https://www.rabbitmq.com/consumer-prefetch.html
+            durable: true,
         });
         channel.prefetch(1)////Only One reciever at a time, to avoid concurency problems at db https://stackoverflow.com/a/48165997
         
 	var queueConfirm ='hotelConfirms'
 	channel.assertQueue(queueConfirm , {
-            durable: false
+            durable: true
         });
 
         console.log(" [*] Waiting for messages in %s. To exit press CTRL+C", queue);

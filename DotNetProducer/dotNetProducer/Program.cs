@@ -10,7 +10,7 @@ using (var connection = factory.CreateConnection())
     using (var channel = connection.CreateModel())
     {
         channel.QueueDeclare(queue: "hotelReservation",
-                     durable: false,
+                     durable: true,
                      exclusive: false,
                      autoDelete: false,
                      arguments: null);

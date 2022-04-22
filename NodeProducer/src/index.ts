@@ -17,7 +17,7 @@ amqp.connect('amqp://localhost', function(error0:any, connection:any) {
     }
     var queue = 'hotelReservation';//Change here to send to the other queue
     channel.assertQueue(queue, {
-      durable: false,
+      durable: true,
     });
 
     var booking={
